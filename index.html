@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
+    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#">Brand</a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item nav-link"><a class="nav-link active" href="#t1">模板提取</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="#t2">Blk序列生成</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="#t3">异常检测</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="#t4">模型对比</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="#t5">实验结果</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background-image:url('assets/img/图片start.png');">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="brand-heading" style="font-size:55px">Deeplog日志异常检测系统</h1>
+                        <p class="intro-text">Hdfs数据集服务器日志<br>异常检测系统</p><a class="btn btn-link btn-circle" role="button" href="#t1"><i class="fa fa-angle-double-down animated"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header class="masthead" style="background-image:url('assets/img/intro-bg.jpg');">
+    <section class="text-center content-section" id="t1">
+        <div class="container">
+            <div class="row" >
+                <h2>模板提取</h2>
+                <div class="col-lg-8 mx-auto" >
+
+                    <p>在实际情况中，系统中输出的日志记录会遵循固定的编排格式, 在固定格式中填入输出的内容和参数. 日志消息是非结构化的，日志解析是提取消息中的事件模板来对原始日志进行结构化， 也就是将每个日志解析为常量（事件模板）+ 变量（消息中的特定参数）的形式。</p>
+              <h1  ondblclick="jumpdrain3();" ><img src="结构.png" title="双击进入Drain3流程介绍" style="width: 100%;height: 100%;cursor:hand"id="jiegou"></h1>
+                    <a  href="tree-legend.html"><img src="日志分析.png" title="双击将当前模块生成HDFs日志模板" style="width: 900px;height: 400px;cursor:hand"></a>
+<!--                <a class="btn btn-link btn-circle" role="button" href="#t2"><i class="fa fa-angle-double-down animated"></i></a>-->
+                </div>
+            </div>
+        </div>
+    </section>
+        </header>
+<!--    <section class="text-center content-section" id="t11">-->
+<!--        <div class="container">-->
+<!--            <div class="row" style="margin-top: 10px">-->
+<!--&lt;!&ndash;                <h2>模板提取</h2>&ndash;&gt;-->
+<!--                <div class="col-lg-8 mx-auto">-->
+<!--               <h1  ondblclick="reshow();"><img src="日志分析.png" title="双击将当前模块生成HDFs日志模板" style="cursor:hand"></h1>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+    <section class="text-center download-section content-section" id="t2" style="background-image:url('assets/img/图片1.png');">
+        <div class="container">
+            <div >
+                <h1>Blk序列生成</h1>
+                <p style="margin-left: 10px">日志中的blk代表程序流，用正则化匹配的方法将生成好的模板和日志匹配，并按照日志时序生成blk序列。</p>
+<!--                <p>BlockId 字段 下的内容是唯一的在日志记录中出现过的所有的进程标识信息 (blk-xxxx), 将每条日志 记录的特征值 (Event-Id) 填入它所属进程下的 Event-Sequence 中。当所有日志记录处理完毕后, 就分离出了整个数据集中的所有进程, 由每个进程下的日志记录特征值结合形 成了对应进程的特征向量 (Event-Sequence).</p><button class="btn btn-primary btn-lg btn-default" type="button">visit download page</button>-->
+<img src="blk.png" style="margin-top: 3%;width: 120%;height:120%;margin-left: 1%">
+                <p>BlockId 字段下的内容是唯一的在日志记录中出现过的所有的进程标识信息 (blk-xx), 将每条日志记录的特征值(Event-Id)填入它所属进程下的Event-Sequence中</p>
+            </div>
+        </div>
+    </section>
+<header class="masthead" style="background-image:url('assets/img/intro-bg.jpg');">
+    <section class="text-center content-section" id="t3" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>异常检测</h2>
+                    <p>使用公开的<a href="https://zenodo.org/record/3227177/files/HDFS_1.tar.gz?download=1">&nbsp;HDFS数据集</a>&nbsp;,从亚马逊 Hadoop 集群上收集。 包括575059个进程产生的11175629条日志记录。</p>
+                    <p>标为正常的进程有558221个，异常的进程有16838个。</p>
+                    <div style="width:800px;">
+                        <div style="width: 500px;float: left">
+                    <img src="trainProcess.png" style="height: 100%;width: 100%"></div>
+                        <div style="width: 300px;float: left;margin-top: 30px">
+                    <img src="alnormal.png" style="height: 200%;width: 120%"></div>
+                    </div>
+<!--                    <ul class="list-inline banner-social-buttons">-->
+
+<!--                        <li class="list-inline-item" ><a href="https://zenodo.org/record/3227177/files/HDFS_1.tar.gz?download=1"><button class="btn btn-primary btn-lg btn-default" type="button"><i class="fa fa-github fa-fw"></i><span class="network-name">&nbsp;Download</span></button></a></li>-->
+<!--                    </ul>-->
+                </div>
+                <p>选择预测概率最大的k个模板ID增强鲁棒性</p>
+                    <p>若实际ID在其中，则认为预测正确（转移关系正常）</p>
+                        <p>如果一个工作流中的所有滑动窗口预测正确，则该工作流正常，否则异常</p>
+            </div>
+        </div>
+
+    </section>
+</header>
+     <section class="text-center download-section content-section" id="t4" style="background-image:url('assets/img/图片1.png');">
+        <div class="container">
+            <div >
+                <h1>模型对比</h1>
+            </div>
+
+        </div>
+         <main class="page projects-page">
+        <section class="portfolio-block projects-cards">
+            <div class="container">
+                <div class="heading">
+                    <h2>Model comparison</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4" style="margin-top: 7%">
+                        <div class="card border-0"><a href="./model1.png"><img class="card-img-top scale-on-hover" src="lstm.png" alt="Card Image" ></a>
+
+                        </div>
+                        <div class="card-body">
+                                <h6><a href="./model1.png">Deeplog</a></h6>
+                                <p class="text-muted card-text" style="font-size: large">两层LSTM用于获取时间序列依赖.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0"><a href="./model2.png"><img class="card-img-top scale-on-hover" src="transformer2.png" alt="Card Image" style="height: 60%;width: 60%"></a>
+
+                        </div>
+                        <div class="card-body">
+                                <h6><a href="./model2.png">Transofrmer_Encoder</a></h6>
+                                <p class="text-muted card-text" style="font-size: large">基于自注意力机制提取时间序列特征.</p>
+                            </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" style="margin-top: 7%">
+                        <div class="card border-0"><a href="./model3.png"><img class="card-img-top scale-on-hover" src="tranformer1.png" alt="Card Image"></a>
+
+                        </div>
+                         <div class="card-body">
+                                <h6><a href="./model3.png">Transofrmer&奇偶伴随序列</a></h6>
+                                <p class="text-muted card-text" style="font-size: large">将时间序列按奇偶拆分，适应Transoformer模型.</p>
+                            </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+    </section>
+
+
+
+<header class="masthead" style="background-image:url('backpng2.png');" id="back">
+    <section class="text-center content-section" id="t5" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>实验结果</h2>
+                    <p>进行数据可视化展示</p>
+                    <a href="viewdata/index.html"><button class="btn btn-primary btn-lg btn-default" type="button"><i class="fa fa-google-plus fa-fw"></i><span class="network-name">  Data view</span></button></a>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+</header>
+
+
+<!--    <div class="map-clean"><iframe allowfullscreen="" frameborder="0" src="https://cdn.bootstrapstudio.io/placeholders/map.html" width="100%" height="450"></iframe></div>-->
+
+
+
+
+    <footer>
+        <div class="container text-center">
+            <p>Copyright ©&nbsp;Brand 2022</p>
+        </div>
+    </footer>
+
+<!--    <script src="assets/bootstrap/js/bootstrap.min.js"></script>-->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/grayscale.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+
+</body>
+
+
+
+</html>

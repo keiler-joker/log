@@ -1,0 +1,216 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=tree-legend&code=LYTwwgFghgTgLgOgM4QPYHcAyqoBMCWAdgOYAUAlANwBQAxqoUnAAS5RxTMC8zA3tc2aEowAKYAuZgHIAKqOAAHADbtRSKQBoBzWhHxLcMUYUkBtbYP6DrQkROkBmZkuPE4EdVpuDd-w8bMLbytvG2ExSSkAUQBGAE5mAB4AKgA-ACVRVAVjZgAhJVRaAGsU1M0ANyglAFcJeKCbRusAX2aAXSCWr2sQsLtIgBZnV3dPZt8DIxNmc1DLWwjpKIAmazKANVEYfAAzfFp2fAZmJBraWlFRXGvmXdQYMs1mKtr7Ne7mhfD7aJiABiSaQAClASqI4JkkAoGDdHmkogAPS4KODHQhPDQvap1SQA5htUKdGyfGx9aw_SIAVhGJDGmgmeimAVmvEWvyiTiBqQAytsKrcAEaFEplOCoMqCZ6vXHMJyk4LsyJRADsgjK6B2cFEBSKpTSRku-AFuGYomRolR6MxMvsKsJgmaGjZlOWKxi6rSABFRC40SRmMK9WV9i4bTj3jEFWSlW6EtzgcYCCRMsoDkcGABZBj4cUwZhosSm1A1FhB0VpSoRyQrOLR3qUgBEsQAbNzxDIYFBGMBc9rTeX9alxWVGxpbXiWw6mkSuj1LM1XVI2y46R4GaFJv4ZnN5i6BssPZ7UgBBXDJ4jMbtXpRGPAgM2I_BMIiXweY7FvPEE-eKpexJwykyI0KlfM1FDgB8FDBYoITuB5AxFIdpWrZgYnlX8Y3_FY1jKPJMAAeTAABpZJmAAOTsHkQCYeQymqEVVF1EpxA_CdmBwn8vj4WM_mGMokRRNETiIZhDVEY0dSQ-D83fSssXYmJhm6fclmiBxAW5fCiNIq8kGKbkC1QVhfQhURuSrL85X-adrG4jo5yCclBCXNVVzcddMJ0Jlt0CeYeP_YZuQAcVQFhzSE9FmHQJlzKQflXzFCV5M_WVlK874D2iGluWAiTQIDOTUiQGBaFYtIbiYcrygU1CaXrLCsqiAAOY9QXBSE1BhQg4RDBCioASUIbUYBgGpUWuNjUNahrel42IPTKdrYM66FYW2Qz7lk6TJRG3thH9YgpqsmIPVmzK1NiFYynEQTLWEwhoq1MCivFZhe1Gh5jtlGIPi-BySWdRcsta9z6S8rdpj8vd5vjXLRBAoUkLKVBdlOfAAC9RBDGBUGAb77ASc6AqamI1RugAxKB9FuN64C7Rhdm2JKymIMKCbxNVidUjkYlasoeQ4eAwPcO9TTphmkCZ7bgzSEcUsUmasW4nnlRWGk8MIkiyKgfSkrEy0lHTbUWYV1D1YJbjmAB1ogdCJd8TBzzGT8KHZhV-a22PPLJIHZG0hKsqykquBqtR9GsY55g21m-zZ0B5zeN-2kPPGTcfLd3dQlVt0uS0rXdMosRqNo_GKtM7VqufK9z1p4yiFefBcD5FhUajlYMOaOPvGJW3E4dpwnbT7xIZZLO_yalZNO5ABVQhzRyWh-zNT783pkAReMm4_XMormOKIb7iEML4JqHrmFEipUFqMRMygBR28BYnBF7wQVOBtSYhpIeNxHjOx-oF8HO0QVhe3zjpMiRdRAl21GXVIeBm55muPvSQg474KGYONNg_Yq5IBrjccWyViqY2xmbKyoCuI2zfnbbwS53Qp3Bi7ZkO4PbYVauA7WFEqI0VgfRc8gsHjIKQpIBBAijC4H3gbAAjnUJgBtEami2ijDEAcSF4VLBfFguBUBqGPmWX0DBLxvW7A-UMogEAoXIUrQB8dbbaE6C0GgVR8zYKgGsHgIQly7BUEYX-o8WFkg_r8X-Nh_FmGAZYtKp0Y6vy4oE-2WUQnWDCe7fywCBo8kOC4dBkTIz_HqhlEmalMBEFELATJ1RRC5LxA4GIMdCnAOwMQCpLhqlyi_mdBpvECIwGTNUFpVTapWQcCqFUT8ulLgAIo1G7GiFwAy2krEGA4AprCsrTNmbmI4AoFlDLSs1BwRMJlZXSKgMKuzUr2DJlSepay1IXPYoMUB1i0m8QGTIEAOQ2l83odzXiMh8DFyyYMy5kgqQHPlFQuJvQgmRAINCFQIAkk-H_juYBXp8DwBADyBQWoQXsWahCgksSHQOJoKASAsBEB6BuNgPAr4KDkvANAeAyAIQEStAwUg2hSDZAetwPgQRxTXzRAoSQid6b4GIMQbYkRczyGRQWHY0rtgERmFIYAJZ4qaoFFIRyNgXAyp6uK5o4oxXSBWAAUkVS4XYodHDWq8g8fAxh7VSAFMLLJirXHQ2zlbXi9MrgxEVTYA4DBIiGg4CQVp3Fub-qXIG0QKwQ3WDDeqyN3ZiAxv8rZF-XlBQPDhGAa-DxIgAGJaAdypLUvVgMgjxR2GoX1ML_KQRyJERNKaE1GFEMGwpPrZiuPaIUs11JHXcVtW6lU47_IFrgOKYAkQrUpuVRAN1LZ_gzvmEgEAwAC1KB5CQyQKpCkqEFL6E1_lBAwiQLmdEkRJ0psEB6tEWSTxG2IOq3s55WmFMENUKV6apVrtrfMYmLgoACiQJeq9Z6L2CqvdYG9d7w3SFXXAJ91gX3piUO-wDkRv24F_f6_9H71WPv9bmux_l5AKGgLe6DCGr33FoDURjUhKqXB6rM0DoRiYL27LgE8PVi1KBUAoeKkh6Z1EKd2QFGZCBehqF2B6YKqT_Fk4QeTD0lMqfRDPBQ2C7TqeaLHUIXcbC9xaOQagVAgA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container0" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container0');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    myChart.showLoading();
+const data = {
+  name: 'Templates',
+  children: [
+    {
+      name: '3 lengths',
+      children: [
+        {
+          name: 'E19 <*>Reopen Block<*>',value:19
+        
+        }
+      ]
+    },
+    {
+      name: '4 lengths',
+      children: [
+        { name: 'E2   <*>Verification succeeded for<*>', value: 2 },
+        { name: 'E10 <*>PacketResponder<*>Exception<*>', value: 10 }
+      ]
+    },
+    {
+      name: '5 lengths',
+      children: [{ name: 'E3  <*>Served block<*>to<*>  ', value: 3 },
+      { name: 'E7  <*>writeBlock<*>received exception<*>',value: 7}
+   
+      ,{ name: 'E21  <*>Deleting block<*>file<*>',value: 21},
+      { name: 'E29  <*>PendingReplicationMonitor timed out block<*>',value: 29},
+      {name:"E16 <*>:Transmitted block<*>to<*>",value: 16}
+      
+      ]
+    },
+    {
+      name: '6 lengths',
+      children: [
+        { name: 'E1   <*>Adding an already existing block<*>', value: 1 },
+        { name: 'E13 <*>Receiving empty packet for block<*>', value: 13 },
+        { name: 'E22 <*>BLOCK* NameSystem<*>allocateBlock:<*>', value: 22 },
+        { name: 'E14 <*>Exception in receiveBlock for block<*>', value: 14 },{ name: 'E30  <*>BLOCK* ask <*> to delete <*>',value: 30}
+      
+        
+      ]
+    },
+    {
+      name: '7 lengths',
+      children: [
+        { name: 'E4  <*>Got exception while serving<*>to<*>', value: 4 },
+        { name: 'E5  <*>Receiving block<*>src:<*>dest:<*>', value: 5 },
+        { name: 'E8  <*>PacketResponder<*>for block<*>Interrupted<*>', value: 8 },
+        { name: 'E11 <*>PacketResponder <*> for block <*> terminating<*>', value: 11 },
+        { name: 'E12<*>:Exception writing block<*>to mirror<*>', value: 12 }
+       
+      ]
+    },{
+      name: '8 lengths',
+      children: [
+        { name: 'E9   <*>Received block<*>of size<*>from<*>', value: 9 },
+        { name: 'E17 <*>:Failed to transfer<*>to<*>got<*>', value: 17 },
+        { name: 'E18 <*>Starting thread to transfer block<*>to<*>', value: 18 }, 
+        { name: 'E25 <*>BLOCK* ask<*>to replicate<*>to<*>', value: 25 }
+         
+      ]
+    },{
+      name: '10 lengths',
+      children: [
+        { name: 'E6   <*>Received block<*>src:<*>dest:<*>of size<*>', value: 6 },
+      
+        
+      ]
+    },{
+      name: '12 lengths',
+      children: [
+        { name: 'E23   <*>BLOCK* NameSystem<*>delete:<*>is added to invalidSet of<*>', value: 23 },
+      
+        
+      ]
+    },{
+      name: '13 lengths',
+      children: [
+        { name: 'E20   <*>Unexpected error trying to delete block<*>BlockInfo not found in volumeMap<*>', value: 20 },
+          ]
+    },{
+      name: '15 lengths',
+      children: [
+
+       { name: 'E26   <*>BLOCK* NameSystem<*>addStoredBlock: blockMap updated:<*>is added to<*>size<*>', value: 26 },
+
+      ]
+    },{
+      name: '21 lengths',
+      children: [
+        { name: 'E28  <*>BLOCK* NameSystem<*>addStoredBlock: addStoredBlock request received for<*>on<*>size<*>But it does not belong to any file.', value: 28 },
+
+      ]
+    },
+  ]
+};
+var data2 = {
+  name: 'flare',
+  children: [
+    {
+      name: '',
+      children: [{ name: '', value: 4116 }]
+    },
+    {
+      name: '',
+      children: [
+        { name: 'IScaleMap', value: 2105 },
+        { name: 'LinearScale', value: 1316 },
+        { name: 'LogScale', value: 3151 },
+        { name: 'OrdinalScale', value: 3770 },
+        { name: 'QuantileScale', value: 2435 },
+        { name: 'QuantitativeScale', value: 4839 },
+        { name: 'RootScale', value: 1756 },
+        { name: 'Scale', value: 4268 },
+        { name: 'ScaleType', value: 1821 },
+        { name: 'TimeScale', value: 5833 }
+      ]
+    },
+    {
+      name: 'display',
+      children: [{ name: 'DirtySprite', value: 8833 }]
+    }
+  ]
+};
+myChart.hideLoading();
+myChart.setOption(
+  (option = {
+    tooltip: {
+      trigger: 'item',
+      triggerOn: 'mousemove'
+    },
+    legend: {
+      top: '2%',
+      left: '3%',
+      orient: 'vertical',
+      data: [
+        {
+          name: 'tree1',
+          icon: 'rectangle'
+        },
+        {
+          name: 'tree2',
+          icon: 'rectangle'
+        }
+      ],
+      borderColor: '#c23531'
+    },
+    series: [
+      {
+        type: 'tree',
+        name: 'tree1',
+        data: [data],
+        top: '5%',
+        left: '7%',
+        bottom: '2%',
+        right: '60%',
+        symbolSize: 7,
+        label: {
+          position: 'left',
+          verticalAlign: 'middle',
+          align: 'right'
+        },
+        leaves: {
+          label: {
+            position: 'right',
+            verticalAlign: 'middle',
+            align: 'left'
+          }
+        },
+        emphasis: {
+          focus: 'descendant'
+        },
+        expandAndCollapse: true,
+        animationDuration: 550,
+        animationDurationUpdate: 750
+      },
+      
+      
+      
+    ]
+  })
+);
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
