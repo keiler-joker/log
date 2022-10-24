@@ -10,15 +10,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <link rel="stylesheet" href="./client/style.css">-->
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
+
+
     <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
         <div class="container"><a class="navbar-brand" href="#">Brand</a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item nav-link"><a class="nav-link active" href="#t1">模板提取</a></li>
-                    <li class="nav-item nav-link"><a class="nav-link" href="#t2">Blk序列生成</a></li>
+<!--                    <li class="nav-item nav-link"><a class="nav-link" href="#t2">Blk序列生成</a></li>-->
                     <li class="nav-item nav-link"><a class="nav-link" href="#t3">异常检测</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" href="#t4">模型对比</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" href="#t5">实验结果</a></li>
@@ -32,24 +37,55 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <h1 class="brand-heading" style="font-size:55px">Deeplog日志异常检测系统</h1>
-                        <p class="intro-text">Hdfs数据集服务器日志<br>异常检测系统</p><a class="btn btn-link btn-circle" role="button" href="#t1"><i class="fa fa-angle-double-down animated"></i></a>
+                        <p class="intro-text">Hdfs数据集服务器日志<br>异常检测系统</p>
+                        <a class="btn btn-link btn-circle" role="button" href="#t1"><i class="fa fa-angle-double-down animated"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <script type="text/javascript">
+			function delayURL(url, time) {
+				setTimeout("top.location.href = '" + url + "'", time);
+			}
+    </script>
+
     <header class="masthead" style="background-image:url('assets/img/intro-bg.jpg');">
     <section class="text-center content-section" id="t1">
         <div class="container">
             <div class="row" >
                 <h2>模板提取</h2>
+
                 <div class="col-lg-8 mx-auto" >
 
                     <p>在实际情况中，系统中输出的日志记录会遵循固定的编排格式, 在固定格式中填入输出的内容和参数. 日志消息是非结构化的，日志解析是提取消息中的事件模板来对原始日志进行结构化， 也就是将每个日志解析为常量（事件模板）+ 变量（消息中的特定参数）的形式。</p>
               <h1  ondblclick="jumpdrain3();" ><img src="结构.png" title="双击进入Drain3流程介绍" style="width: 100%;height: 100%;cursor:hand"id="jiegou"></h1>
-                    <a  href="tree-legend.html"><img src="日志分析.png" title="双击将当前模块生成HDFs日志模板" style="width: 900px;height: 400px;cursor:hand"></a>
+                <link rel="stylesheet" href="./client/style.css">
+                    <div class="dnd-file-uploader" style="width: 850px">
+                        <div class="drop-area" >
+                            <a><ion-icon class="upload-icon" name="cloud-upload" style="width: 700px;height: 100px"></ion-icon></a>
+                          <p class="tip">Drag&Drop files here</p>
+
+                        </div>
+                        <a class="btn  btn-outline" role="button" onClick="delayURL('viewdata/tree-legend.html',500)" style="width: 90px;height: 60px;margin-top: 10px"><i class="fa fa-paste"><p>解析</p></i></a>
+<!--                        <button>ssss</button>-->
+                        <div class="task-list"></div>
+
+                    </div>
+
+                <template id="template-task">
+                        <div class="task">
+                          <a class="task-name" target="_blank">some file name</a>
+                          <span class="task-progress">10%</span>
+                        </div>
+                </template>
+
+<!--                    <a  href="tree-legend.html"><img src="日志分析.png" title="双击将当前模块生成HDFs日志模板" style="width: 900px;height: 400px;cursor:hand"></a>-->
 <!--                <a class="btn btn-link btn-circle" role="button" href="#t2"><i class="fa fa-angle-double-down animated"></i></a>-->
                 </div>
+
+
+
             </div>
         </div>
     </section>
@@ -64,17 +100,20 @@
 <!--            </div>-->
 <!--        </div>-->
 <!--    </section>-->
-    <section class="text-center download-section content-section" id="t2" style="background-image:url('assets/img/图片1.png');">
-        <div class="container">
-            <div >
-                <h1>Blk序列生成</h1>
-                <p style="margin-left: 10px">日志中的blk代表程序流，用正则化匹配的方法将生成好的模板和日志匹配，并按照日志时序生成blk序列。</p>
-<!--                <p>BlockId 字段 下的内容是唯一的在日志记录中出现过的所有的进程标识信息 (blk-xxxx), 将每条日志 记录的特征值 (Event-Id) 填入它所属进程下的 Event-Sequence 中。当所有日志记录处理完毕后, 就分离出了整个数据集中的所有进程, 由每个进程下的日志记录特征值结合形 成了对应进程的特征向量 (Event-Sequence).</p><button class="btn btn-primary btn-lg btn-default" type="button">visit download page</button>-->
-<img src="blk.png" style="margin-top: 3%;width: 120%;height:120%;margin-left: 1%">
-                <p>BlockId 字段下的内容是唯一的在日志记录中出现过的所有的进程标识信息 (blk-xx), 将每条日志记录的特征值(Event-Id)填入它所属进程下的Event-Sequence中</p>
-            </div>
-        </div>
-    </section>
+<!--    <section class="text-center download-section content-section" id="t2" style="background-image:url('assets/img/图片1.png');">-->
+<!--        <div class="container">-->
+<!--            <div >-->
+<!--                <h1>Blk序列生成</h1>-->
+<!--                <p style="margin-left: 10px">日志中的blk代表程序流，用正则化匹配的方法将生成好的模板和日志匹配，并按照日志时序生成blk序列。</p>-->
+<!--&lt;!&ndash;                <p>BlockId 字段 下的内容是唯一的在日志记录中出现过的所有的进程标识信息 (blk-xxxx), 将每条日志 记录的特征值 (Event-Id) 填入它所属进程下的 Event-Sequence 中。当所有日志记录处理完毕后, 就分离出了整个数据集中的所有进程, 由每个进程下的日志记录特征值结合形 成了对应进程的特征向量 (Event-Sequence).</p><button class="btn btn-primary btn-lg btn-default" type="button">visit download page</button>&ndash;&gt;-->
+<!--<img src="blk.png" style="margin-top: 3%;width: 120%;height:300px;margin-left: 1%">-->
+<!--                <p>BlockId 字段下的内容是唯一的在日志记录中出现过的所有的进程标识信息 (blk-xx), 将每条日志记录的特征值(Event-Id)填入它所属进程下的Event-Sequence中</p>-->
+<!--                <p></p>-->
+<!--                <p></p>-->
+<!--                <p></p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 <header class="masthead" style="background-image:url('assets/img/intro-bg.jpg');">
     <section class="text-center content-section" id="t3" >
         <div class="container">
@@ -186,7 +225,10 @@
     <script src="assets/js/grayscale.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
-
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./client/FileUploader.js"></script>
+  <script src="./client/script.js"></script>
 </body>
 
 
